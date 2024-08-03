@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="add9b1c3-2838-44e7-bf56-c2302a315d7f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2k67SNh0ZIzbK1LrsXbq1B9r2F2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/PlaywrightAPIAutomation/PlaywrightAPI/src/test/resources"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PlaywrightAPIAutomation\PlaywrightAPI\src\test\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Utils" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.CreatePOSTCallPOJOLombok.createUserTest">
+    <configuration name="CreatePOSTCallPOJOLombok.createUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="PlaywrightAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.api.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.api.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.api.tests.CreatePOSTCallPOJOLombok" />
+      <option name="METHOD_NAME" value="createUserTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreatePOSTCallTest.createUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="PlaywrightAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.api.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.api.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.api.tests.CreatePOSTCallTest" />
+      <option name="METHOD_NAME" value="createUserTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateUserWithJsonFile.createUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="PlaywrightAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.api.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.api.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.api.tests.CreateUserWithJsonFile" />
+      <option name="METHOD_NAME" value="createUserTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateUserWithJsonString.createUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="PlaywrightAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.api.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.api.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.api.tests.CreateUserWithJsonString" />
+      <option name="METHOD_NAME" value="createUserTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateUserWithPOJO.createUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="PlaywrightAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.api.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.api.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.api.tests.CreateUserWithPOJO" />
+      <option name="METHOD_NAME" value="createUserTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.CreatePOSTCallPOJOLombok.createUserTest" />
+        <item itemvalue="TestNG.CreateUserWithPOJO.createUserTest" />
+        <item itemvalue="TestNG.CreateUserWithJsonFile.createUserTest" />
+        <item itemvalue="TestNG.CreateUserWithJsonString.createUserTest" />
+        <item itemvalue="TestNG.CreatePOSTCallTest.createUserTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="add9b1c3-2838-44e7-bf56-c2302a315d7f" name="Changes" comment="" />
+      <created>1722592173036</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722592173036</updated>
+    </task>
+    <servers />
+  </component>
+</project>
