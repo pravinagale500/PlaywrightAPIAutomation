@@ -2,6 +2,8 @@ package Utils;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.model.Media;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -61,33 +63,6 @@ public class ExtentReportListener extends BaseTest implements ITestListener {
     }
 
     @Override
-    public synchronized void onFinish(ITestContext context) {
-        File reportfile = new File(OUTPUT_FOLDER + FILE_NAME);
-        Log.info(("Test Suite is ending!"));
-
-        // Calculate total execution time
-        long totalTimeMillis = System.currentTimeMillis() - context.getStartDate().getTime();
-        long totalTimeSeconds = totalTimeMillis / 1000;
-        long hours = totalTimeSeconds / 3600;
-        long minutes = (totalTimeSeconds % 3600) / 60;
-        long seconds = totalTimeSeconds % 60;
-        String totalTimeFormatted = String.format("%02d:%02d:%02d", hours, minutes, seconds);
-
-        // Add total execution time to the Extent Report
-        extent.setReportUsesManualConfiguration(true); // enable manual configuration
-        extent.addTestRunnerOutput("Total Execution Time:  ");
-        extent.addTestRunnerOutput(totalTimeFormatted);
-
-        extent.flush();
-        try {
-            Desktop.getDesktop().browse(reportfile.toURI());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        test.remove();
-    }
-
-    @Override
     public synchronized void onTestStart(ITestResult result) {
         String methodName = result.getMethod().getMethodName();
         String qualifiedName = result.getMethod().getQualifiedName();
@@ -141,10 +116,10 @@ public class ExtentReportListener extends BaseTest implements ITestListener {
         return calendar.getTime();
     }
 
-    public void reportStep(String desc, String status) {
-        Log.info(desc);
-        reportStep(desc, status);
-    }
+//    public void reportStep(String desc, String status) {
+//        Log.info(desc);
+//
+//    }
 
 //    public void attachScreenShot() {
 //        synchronized (test) {
@@ -153,26 +128,54 @@ public class ExtentReportListener extends BaseTest implements ITestListener {
 //    }
 
 
-    public void reportStep(String desc, String status,ITestResult result) {
+    public void reportStep(String desc, String status) {
         synchronized (test) {
-            // Start reporting the step and snapshot
-//            Media img = null;
-//            if (bSnap && !(status.equalsIgnoreCase("INFO") || status.equalsIgnoreCase("skipped"))) {
-//                img = MediaEntityBuilder.createScreenCaptureFromPath(passFailScreenshot()).build();
-//            }
+            // Log step description and status on Extent Report
             if (status.equalsIgnoreCase("pass")) {
-                test.get().pass(result.getMethod().getMethodName());
-            } else if (status.equalsIgnoreCase("fail")) { // additional steps to manage alert pop-up
-                test.get().fail(result.getMethod().getMethodName());
+                Log.info(desc);
+                test.get().pass(desc);
+            } else if (status.equalsIgnoreCase("fail")) {
+                Log.info(desc);
+                test.get().fail(desc);
                 throw new RuntimeException("See the reporter for details.");
             } else if (status.equalsIgnoreCase("warning")) {
-                test.get().warning(result.getMethod().getMethodName());
+                Log.info(desc);
+                test.get().warning(desc);
             } else if (status.equalsIgnoreCase("skipped")) {
-                test.get().skip("The test is skipped due to dependency failure");
+                Log.info(desc);
+                test.get().skip(desc);
             } else if (status.equalsIgnoreCase("INFO")) {
-                test.get().info(result.getMethod().getMethodName());
+                Log.info(desc);
+                test.get().info(desc);
             }
         }
+    }
+
+    @Override
+    public synchronized void onFinish(ITestContext context) {
+        File reportfile = new File(OUTPUT_FOLDER + FILE_NAME);
+        Log.info(("Test Suite is ending!"));
+
+        // Calculate total execution time
+        long totalTimeMillis = System.currentTimeMillis() - context.getStartDate().getTime();
+        long totalTimeSeconds = totalTimeMillis / 1000;
+        long hours = totalTimeSeconds / 3600;
+        long minutes = (totalTimeSeconds % 3600) / 60;
+        long seconds = totalTimeSeconds % 60;
+        String totalTimeFormatted = String.format("%02d:%02d:%02d", hours, minutes, seconds);
+
+        // Add total execution time to the Extent Report
+        extent.setReportUsesManualConfiguration(true); // enable manual configuration
+        extent.addTestRunnerOutput("Total Execution Time:  ");
+        extent.addTestRunnerOutput(totalTimeFormatted);
+
+        extent.flush();
+        try {
+            Desktop.getDesktop().browse(reportfile.toURI());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        test.remove();
     }
 }
 
